@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ananda Reddy</title>
+    <meta name="description" content="Portfolio of Ananda Reddy, a Software Engineer specializing in backend development, microservices, and cloud-native solutions.">
+    <meta name="keywords" content="Software Engineer, Backend Developer, Microservices, Cloud, Java, Spring Boot, Azure">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
@@ -113,13 +115,13 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                         <h3 class="text-xl font-semibold mb-3 text-gray-200">Languages & Databases</h3>
-                        <div id="skills-languages-db" class="flex flex-wrap">
+                        <div id="skills-languages-db" class="flex flex-wrap overflow-x-auto" aria-label="Programming Languages and Databases">
                             <!-- Skills will be populated by JS -->
                         </div>
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold mb-3 text-gray-200">Frameworks & Technologies</h3>
-                        <div id="skills-frameworks-tech" class="flex flex-wrap">
+                        <div id="skills-frameworks-tech" class="flex flex-wrap overflow-x-auto" aria-label="Frameworks and Technologies">
                             <!-- Skills will be populated by JS -->
                         </div>
                     </div>
@@ -247,54 +249,66 @@
             // Header
             document.getElementById('header-name').textContent = resumeData.name;
             const headerLinks = document.getElementById('header-links');
+            // SVG constants for reuse
+            const mailSVG = `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>`;
+            const linkedinSVG = `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>`;
+            const githubSVG = `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>`;
             headerLinks.innerHTML = `
-                <a href="mailto:${resumeData.email}" class="text-gray-400 hover:text-white transition duration-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                <a href="mailto:${resumeData.email}" class="text-gray-400 hover:text-white transition duration-300" aria-label="Email" title="Email">
+                    ${mailSVG}
                 </a>
-                <a href="${resumeData.linkedin}" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <a href="${resumeData.linkedin}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn" title="LinkedIn">
+                    ${linkedinSVG}
                 </a>
-                <a href="${resumeData.github}" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <a href="${resumeData.github}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub" title="GitHub">
+                    ${githubSVG}
                 </a>
             `;
 
             // Summary
             document.getElementById('summary-content').textContent = resumeData.summary;
 
-            // Skills
+            // Skills (use textContent for better performance and security)
             const skillsLangDb = document.getElementById('skills-languages-db');
-            [...resumeData.technical_skills.languages, ...resumeData.technical_skills.databases].forEach(skill => {
-                skillsLangDb.innerHTML += `<span class="skill-tag">${skill}</span>`;
+            resumeData.technical_skills.languages.concat(resumeData.technical_skills.databases).forEach(skill => {
+                const span = document.createElement('span');
+                span.className = 'skill-tag';
+                span.textContent = skill;
+                skillsLangDb.appendChild(span);
             });
-             const skillsFrameworksTech = document.getElementById('skills-frameworks-tech');
-            [...resumeData.technical_skills.frameworks, ...resumeData.technical_skills.technologies, ...resumeData.technical_skills.data_technologies].forEach(skill => {
-                skillsFrameworksTech.innerHTML += `<span class="skill-tag">${skill}</span>`;
-            });
+            const skillsFrameworksTech = document.getElementById('skills-frameworks-tech');
+            resumeData.technical_skills.frameworks
+                .concat(resumeData.technical_skills.technologies, resumeData.technical_skills.data_technologies)
+                .forEach(skill => {
+                    const span = document.createElement('span');
+                    span.className = 'skill-tag';
+                    span.textContent = skill;
+                    skillsFrameworksTech.appendChild(span);
+                });
 
             // Experience
             const timeline = document.getElementById('experience-timeline');
             resumeData.experience.forEach(job => {
-                const bullets = job.bullets.map(b => `<li>${b}</li>`).join('');
-                timeline.innerHTML += `
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <h3 class="text-xl font-semibold text-gray-100">${job.title}</h3>
-                        <p class="text-md text-gray-400 mb-2">${job.company} | ${job.duration} | ${job.location}</p>
-                        <ul class="list-disc list-inside text-gray-300 space-y-2">${bullets}</ul>
-                    </div>
+                const div = document.createElement('div');
+                div.className = 'timeline-item';
+                div.innerHTML = `
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-semibold text-gray-100">${job.title}</h3>
+                    <p class="text-md text-gray-400 mb-2">${job.company} | ${job.duration} | ${job.location}</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">${job.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
                 `;
+                timeline.appendChild(div);
             });
 
             // Education
             const educationList = document.getElementById('education-list');
             resumeData.education.forEach(edu => {
-                educationList.innerHTML += `
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-100">${edu.degree}</h3>
-                        <p class="text-md text-gray-400">${edu.university} | ${edu.duration} | ${edu.location}</p>
-                    </div>
+                const div = document.createElement('div');
+                div.innerHTML = `
+                    <h3 class="text-xl font-semibold text-gray-100">${edu.degree}</h3>
+                    <p class="text-md text-gray-400">${edu.university} | ${edu.duration} | ${edu.location}</p>
                 `;
+                educationList.appendChild(div);
             });
         });
 
