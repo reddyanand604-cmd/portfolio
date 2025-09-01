@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ananda Reddy</title>
-    <meta name="description" content="Portfolio of Ananda Reddy, a Software Engineer specializing in backend development, microservices, and cloud-native solutions.">
-    <meta name="keywords" content="Software Engineer, Backend Developer, Microservices, Cloud, Java, Spring Boot, Azure">
+    <meta name="description"
+        content="Portfolio of Ananda Reddy, a Software Engineer specializing in backend development, microservices, and cloud-native solutions.">
+    <meta name="keywords"
+        content="Software Engineer, Backend Developer, Microservices, Cloud, Java, Spring Boot, Azure">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ananda Reddy">
+    <meta http-equiv="Content-Language" content="en">
+    <link rel="canonical" href="https://anandareddy.netlify.app/">
+    <meta name="theme-color" content="#4F46E5">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
@@ -17,6 +26,7 @@
             background-color: #111827;
             color: #E5E7EB;
         }
+
         #bg-canvas {
             position: fixed;
             top: 0;
@@ -26,6 +36,7 @@
             z-index: -1;
             opacity: 0.5;
         }
+
         .section-card {
             background-color: rgba(31, 41, 55, 0.8);
             backdrop-filter: blur(10px);
@@ -37,18 +48,22 @@
             opacity: 0;
             transform: translateY(20px);
         }
+
         .section-card.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         .section-card:hover {
             transform: translateY(-5px) scale(1.01);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
+
         .section-highlight {
-             box-shadow: 0 0 30px rgba(79, 70, 229, 0.6);
-             border-color: rgba(99, 102, 241, 0.8);
+            box-shadow: 0 0 30px rgba(79, 70, 229, 0.6);
+            border-color: rgba(99, 102, 241, 0.8);
         }
+
         .skill-tag {
             background-color: #374151;
             color: #D1D5DB;
@@ -60,9 +75,11 @@
             margin: 0.25rem;
             transition: background-color 0.3s ease;
         }
+
         .skill-tag:hover {
             background-color: #4F46E5;
         }
+
         .timeline::before {
             content: '';
             position: absolute;
@@ -72,11 +89,13 @@
             width: 2px;
             background-color: #4B5563;
         }
+
         .timeline-item {
             position: relative;
             padding-left: 3rem;
             margin-bottom: 2rem;
         }
+
         .timeline-dot {
             position: absolute;
             left: 0;
@@ -91,52 +110,346 @@
     </style>
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Ananda Reddy - Software Engineer Portfolio">
-    <meta property="og:description" content="Portfolio of Ananda Reddy, a Software Engineer specializing in backend development, microservices, and cloud-native solutions.">
+    <meta property="og:description"
+        content="Portfolio of Ananda Reddy, a Software Engineer specializing in backend development, microservices, and cloud-native solutions.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anandareddy.netlify.app/">
     <meta property="og:image" content="https://anandareddy.netlify.app/assets/preview.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Ananda Reddy Portfolio">
+    <!-- Optional: Google site verification -->
+    <meta name="google-site-verification" content="XOq_z-GEcHwsmFc2D2kOy6akWT2pZKFlnJp3oLnzk3A" />
+    <!-- Optional: Alternate language (add more if you support other languages) -->
+    <!-- <link rel="alternate" hreflang="en" href="https://anandareddy.netlify.app/" /> -->
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ananda Reddy - Software Engineer Portfolio">
-    <meta name="twitter:description" content="Portfolio of Ananda Reddy, a Software Engineer specializing in backend development, microservices, and cloud-native solutions.">
+    <meta name="twitter:description"
+        content="Portfolio of Ananda Reddy, a Software Engineer specializing in backend development, microservices, and cloud-native solutions.">
     <meta name="twitter:image" content="https://anandareddy.netlify.app/assets/preview.jpg">
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
+        {
+            "person": {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Ananda Reddy",
+              "url": "https://anandareddy.netlify.app/",
+              "image": "https://anandareddy.netlify.app/assets/preview.jpg",
+              "sameAs": [
+                "https://www.linkedin.com/in/ar65/",
+                "https://github.com/reddyanand604-cmd"
+              ],
+              "jobTitle": "Software Engineer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Freelance"
+              },
+              "email": "mailto:reddyananda418@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bengaluru",
+                "addressCountry": "India"
+              },
+              "telephone": "8792228849",
+              "description": "Results-driven Software Engineer with 5+ years of experience in backend development, microservices, and cloud-native solutions.",
+              "hasCredential": [
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "credentialCategory": "Degree",
+                  "name": "Master of Business Administration",
+                  "educationalLevel": "Master",
+                  "recognizedBy": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "University of Cumberlands"
+                  },
+                  "awardedBy": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "University of Cumberlands"
+                  }
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "credentialCategory": "Degree",
+                  "name": "Master of Science in Computer Science",
+                  "educationalLevel": "Master",
+                  "recognizedBy": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Texas State University"
+                  },
+                  "awardedBy": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Texas State University"
+                  }
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "credentialCategory": "Degree",
+                  "name": "Bachelor of Engineering in Computer Science",
+                  "educationalLevel": "Bachelor",
+                  "recognizedBy": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Visvesvaraya Technological University"
+                  },
+                  "awardedBy": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Visvesvaraya Technological University"
+                  }
+                }
+              ],
+              "knowsAbout": [
+                "Java",
+                "C#",
+                "C++",
+                "Python",
+                "SQL",
+                "Azure",
+                "OpenShift",
+                "Docker",
+                "Jenkins",
+                "Kusto",
+                "App Dynamics",
+                "Spring Boot",
+                ".NET",
+                "Flask",
+                "Spring Integration",
+                "Spring Cloud Stream",
+                "JUnit",
+                "Kafka",
+                "Confluent Platform",
+                "JSON Parsing (Gson)",
+                "GraphQL",
+                "REST",
+                "SOAP UI",
+                "MongoDB",
+                "MySQL",
+                "SQL Server",
+                "Oracle",
+                "BitBucket",
+                "Git",
+                "CI/CD Pipelines",
+                "Microservices Architecture",
+                "Event-Driven Systems",
+                "API Design",
+                "Data Modeling",
+                "Cloud-Native Development",
+                "Real-Time Systems",
+                "AI-Assisted Development"
+              ],
+              "hasOccupation": [
+                {
+                  "@type": "Role",
+                  "roleName": "Independent Software Consultant",
+                  "startDate": "2023-08",
+                  "endDate": "2025-05",
+                  "description": "Designed and implemented dynamic table creation in Oracle Database using Spring Data JPA for efficient data management. Developed and maintained a microservices architecture, managing 50+ APIs with Java Spring Boot to support front-end applications.",
+                  "skills": [
+                    "Java Spring Boot",
+                    "Oracle Database",
+                    "Spring Data JPA",
+                    "Microservices",
+                    "API Development",
+                    "OpenShift",
+                    "Jenkins",
+                    "Kafka",
+                    "MongoDB",
+                    "JSON Parsing",
+                    "AI-Assisted Development"
+                  ]
+                },
+                {
+                  "@type": "Role",
+                  "roleName": "Software Engineer",
+                  "startDate": "2022-01",
+                  "endDate": "2023-07",
+                  "worksFor": {
+                    "@type": "Organization",
+                    "name": "Microsoft"
+                  },
+                  "description": "Architected and developed components for Microsoft APIM GraphQL and Synthetic GraphQL services using C#/.NET. Integrated Geneva Monagent into the newly upgraded APIM stack to enhance monitoring capabilities.",
+                  "skills": [
+                    "C#",
+                    ".NET",
+                    "GraphQL",
+                    "Azure API Management",
+                    "Geneva Monagent",
+                    "Telemetry",
+                    "Kusto",
+                    "Azure CLI",
+                    "Python SDK",
+                    "Azure Workbooks"
+                  ]
+                },
+                {
+                  "@type": "Role",
+                  "roleName": "Software Engineer",
+                  "worksFor": {
+                    "@type": "Organization",
+                    "name": "Citi"
+                  },
+                  "description": "Designed and built scalable Microservices utilizing Java and Spring Boot. Created robust stream listeners to consume and process data from Kafka topics.",
+                  "skills": [
+                    "Java",
+                    "Spring Boot",
+                    "Microservices",
+                    "Kafka",
+                    "JSON Parsing",
+                    "Gson",
+                    "RESTful Services",
+                    "MongoDB",
+                    "Jenkins"
+                  ]
+                },
+                {
+                  "@type": "Role",
+                  "roleName": "Graduate Instructional Assistant",
+                  "worksFor": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Texas State University"
+                  },
+                  "description": "Developed REST endpoints using Flask microservices to serve data to front-end applications. Designed and implemented data models using SQLAlchemy ORM to interact with a MySQL database.",
+                  "skills": [
+                    "Flask",
+                    "REST APIs",
+                    "SQLAlchemy",
+                    "MySQL",
+                    "Python",
+                    "Data Pipelines",
+                    "Data Modeling"
+                  ]
+                }
+              ],
+              "alumniOf": [
+                {
+                  "@type": "CollegeOrUniversity",
+                  "name": "University of Cumberlands",
+                  "sameAs": "https://www.ucumberlands.edu/"
+                },
+                {
+                  "@type": "CollegeOrUniversity",
+                  "name": "Texas State University",
+                  "sameAs": "https://www.txst.edu/"
+                },
+                {
+                  "@type": "CollegeOrUniversity",
+                  "name": "Visvesvaraya Technological University",
+                  "sameAs": "https://vtu.ac.in/en/"
+                }
+              ]
+            }
+          }
+    </script>
+    <!-- Breadcrumb structured data -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Ananda Reddy",
-      "url": "https://anandareddy.netlify.app/",
-      "image": "https://anandareddy.netlify.app/assets/preview.jpg",
-      "sameAs": [
-        "https://www.linkedin.com/in/ar65/",
-        "https://github.com/reddyanand604-cmd"
-      ],
-      "jobTitle": "Software Engineer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
-      },
-      "email": "mailto:reddyananda418@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bengaluru",
-        "addressCountry": "India"
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://anandareddy.netlify.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://anandareddy.netlify.app/"
+        }
+      ]
     }
     </script>
+    <!-- FAQ structured data -->
+    <script type="application/ld+json">
+        ```json
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What technologies does Ananda Reddy specialize in?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ananda specializes in backend development with expertise in Java/Spring Boot, C#/.NET, microservices architecture, and cloud-native solutions. He has extensive experience with Azure cloud services, Kafka for event-driven architectures, Docker, OpenShift, and various databases including MongoDB, MySQL and Oracle."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is Ananda's experience with cloud technologies?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ananda has strong Azure cloud experience from his time at Microsoft, where he worked on Azure API Management (APIM) services, developed Azure CLI commands using Python SDK, and created Azure workbook dashboards. He also has experience deploying and managing applications in OpenShift environments."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What kind of projects has Ananda worked on?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ananda has worked on diverse projects including: Microsoft APIM GraphQL services, high-throughput Kafka data processing systems, real-time email notification systems, microservices architectures managing 50+ APIs, and the GIA Scheduler for automating graduate assistant scheduling at Texas State University."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What companies has Ananda worked for?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ananda has professional experience at Microsoft as a Software Engineer, at Citi as a Software Engineer, and as an Independent Software Consultant. He also worked as a Graduate Instructional Assistant at Texas State University while completing his Master's degree."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is Ananda's educational background?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ananda holds a Master of Science in Computer Science from Texas State University (GPA: 3.58), a Master of Business Administration from University of Cumberlands (GPA: 3.83), and a Bachelor of Engineering in Computer Science from Visvesvaraya Technological University in India."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I contact Ananda Reddy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can contact Ananda via email at reddyananda418@gmail.com, through LinkedIn (linkedin.com/in/ar65), or by phone at 8792228849. He is based in Bengaluru, India and available for consulting opportunities and full-time positions."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Ananda have experience with AI-assisted development?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Ananda has experience leveraging AI assistants including Copilot to fast-track proof-of-concept development and enhance coding efficiency, as mentioned in his independent consulting work."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What CI/CD tools has Ananda worked with?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ananda has extensive experience building and optimizing CI/CD pipelines using Jenkins for automated deployments and has worked with various DevOps tools including Docker, OpenShift, BitBucket, and Git."
+              }
+            }
+          ]
+        }
+        ```
+    </script>
 </head>
+
 <body class="overflow-x-hidden">
     <canvas id="bg-canvas"></canvas>
 
     <div class="container mx-auto px-4 md:px-8 py-16">
         <header class="text-center mb-16 section-card">
-            <h1 id="header-name" class="text-5xl md:text-7xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-600"></h1>
+            <h1 id="header-name"
+                class="text-5xl md:text-7xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-600">
+            </h1>
             <p class="text-xl md:text-2xl text-gray-300">Software Engineer</p>
-            <div id="header-links" class="mt-6 flex justify-center space-x-6">
-                 <!-- Links will be populated by JS -->
+            <div id="header-links" class="mt-6 flex justify-center space-x-6" aria-label="Social Links">
+                <!-- Links will be populated by JS -->
             </div>
         </header>
 
@@ -146,20 +459,22 @@
                 <h2 class="text-3xl font-bold mb-4 text-indigo-400">Summary</h2>
                 <p id="summary-content" class="text-gray-300 leading-relaxed"></p>
             </section>
-            
+
             <!-- Technical Skills Section -->
             <section id="skills" class="section-card">
                 <h2 class="text-3xl font-bold mb-6 text-indigo-400">Technical Skills</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                         <h3 class="text-xl font-semibold mb-3 text-gray-200">Languages & Databases</h3>
-                        <div id="skills-languages-db" class="flex flex-wrap overflow-x-auto" aria-label="Programming Languages and Databases">
+                        <div id="skills-languages-db" class="flex flex-wrap overflow-x-auto"
+                            aria-label="Programming Languages and Databases">
                             <!-- Skills will be populated by JS -->
                         </div>
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold mb-3 text-gray-200">Frameworks & Technologies</h3>
-                        <div id="skills-frameworks-tech" class="flex flex-wrap overflow-x-auto" aria-label="Frameworks and Technologies">
+                        <div id="skills-frameworks-tech" class="flex flex-wrap overflow-x-auto"
+                            aria-label="Frameworks and Technologies">
                             <!-- Skills will be populated by JS -->
                         </div>
                     </div>
@@ -173,7 +488,7 @@
                     <!-- Experience will be populated by JS -->
                 </div>
             </section>
-            
+
             <!-- Education Section -->
             <section id="education" class="section-card">
                 <h2 class="text-3xl font-bold mb-6 text-indigo-400">Education</h2>
@@ -183,103 +498,103 @@
             </section>
 
         </main>
-        
+
         <footer class="text-center mt-16 text-gray-500 section-card">
-            <p>&copy; 2025 Ananda Reddy. Designed & Developed with a 3D touch.</p>
+            <p>&copy; 2025 Ananda Reddy</p>
         </footer>
     </div>
-    
+
     <script>
         // --- RESUME DATA ---
         const resumeData = {
-          "name": "Ananda Reddy",
-          "location": "Bengaluru",
-          "phone": "8792228849",
-          "email": "reddyananda418@gmail.com",
-          "linkedin": "https://www.linkedin.com/in/ar65/",
-          "github": "https://github.com/reddyanand604-cmd",
-          "summary": "Results-driven Software Engineer with 5+ years of experience in backend development, microservices, and cloud-native solutions. Proven expertise in Java/Spring Boot, C#/.NET, and event-driven architectures (Kafka). Adept at designing scalable APIs (REST/GraphQL), optimizing databases, and implementing CI/CD pipelines (Jenkins, OpenShift). Strong background in Azure cloud services, real-time systems, and AI-assisted development. Passionate about building efficient, high-performance applications with a focus on clean code and automation.",
-          "technical_skills": {
-            "languages": ["Java", "C#", "C++", "Python", "SQL"],
-            "technologies": ["Azure", "OpenShift", "Docker", "Jenkins", "Kusto", "App Dynamics"],
-            "frameworks": ["Spring Boot", ".NET", "Flask", "Spring Integration", "Spring Cloud Stream", "JUnit"],
-            "data_technologies": ["Kafka", "Confluent Platform", "JSON Parsing (Gson)", "GraphQL", "REST", "SOAP UI"],
-            "databases": ["MongoDB", "MySQL", "SQL Server", "Oracle"],
-          },
-          "experience": [
-            {
-              "title": "Independent Software Consultant",
-              "company": "Freelance",
-              "duration": "Aug 2023 - May 2025",
-              "location": "Remote",
-              "bullets": [
-                "Designed and implemented dynamic table creation in Oracle Database using Spring Data JPA for efficient data management.",
-                "Developed and maintained a microservices architecture, managing 50+ APIs with Java Spring Boot to support front-end applications.",
-                "Engineered a real-time email notification system to deliver updates to product consumers, improving engagement and communication.",
-                "Deployed and managed applications in OpenShift environment, ensuring high availability and scalability.",
-                "Built and optimized CI/CD pipelines using Jenkins for automated deployments and seamless integration.",
-                "Developed high-throughput Kafka listeners to process, enrich, and persist high-volume data using JSON parsing libraries and MongoDB.",
-                "Leveraged AI assistants, including Copilot, to fast-track proof-of-concept development and enhance efficiency."
-              ]
+            "name": "Ananda Reddy",
+            "location": "Bengaluru",
+            "phone": "8792228849",
+            "email": "reddyananda418@gmail.com",
+            "linkedin": "https://www.linkedin.com/in/ar65/",
+            "github": "https://github.com/reddyanand604-cmd",
+            "summary": "Results-driven Software Engineer with 5+ years of experience in backend development, microservices, and cloud-native solutions. Proven expertise in Java/Spring Boot, C#/.NET, and event-driven architectures (Kafka). Adept at designing scalable APIs (REST/GraphQL), optimizing databases, and implementing CI/CD pipelines (Jenkins, OpenShift). Strong background in Azure cloud services, real-time systems, and AI-assisted development. Passionate about building efficient, high-performance applications with a focus on clean code and automation.",
+            "technical_skills": {
+                "languages": ["Java", "C#", "C++", "Python", "SQL"],
+                "technologies": ["Azure", "OpenShift", "Docker", "Jenkins", "Kusto", "App Dynamics"],
+                "frameworks": ["Spring Boot", ".NET", "Flask", "Spring Integration", "Spring Cloud Stream", "JUnit"],
+                "data_technologies": ["Kafka", "Confluent Platform", "JSON Parsing (Gson)", "GraphQL", "REST", "SOAP UI"],
+                "databases": ["MongoDB", "MySQL", "SQL Server", "Oracle"],
             },
-            {
-              "title": "Software Engineer",
-              "company": "Microsoft",
-              "duration": "Jan 2022 - Jul 2023",
-              "location": "Irving, TX, USA",
-              "bullets": [
-                "Architected and developed components for Microsoft APIM GraphQL and Synthetic GraphQL services using C#/.NET.",
-                "Integrated Geneva Monagent into the newly upgraded APIM stack to enhance monitoring capabilities.",
-                "Developed comprehensive telemetry and metrics for APIM services by leveraging Geneva and monagent to facilitate log flow from application to Kusto.",
-                "Designed and developed Azure CLI commands for new APIM services by leveraging the Azure Python SDK.",
-                "Resolved critical customer-facing issues and bugs related to Azure API Management (APIM), improving service reliability.",
-              ]
-            },
-            {
-              "title": "Software Engineer",
-              "company": "Citi",
-              "duration": "Aug 2020 - Dec 2021",
-               "location": "Irving, TX, USA",
-              "bullets": [
-                "Designed and built scalable Microservices utilizing Java and Spring Boot.",
-                "Created robust stream listeners to consume and process data from Kafka topics.",
-                "Transformed incoming Kafka JSON data using parsing libraries like Gson for downstream consumption.",
-                "Developed RESTful services using Java to retrieve data from MongoDB, providing necessary data to downstream applications.",
-                "Enhanced backend application efficiency by 20% through strategic code refactoring and reduction of event interdependencies.",
-              ]
-            },
-            {
-              "title": "Graduate Instructional Assistant",
-              "company": "Texas State University",
-              "duration": "Jul 2018 - May 2020",
-              "location": "Austin, TX, USA",
-              "bullets": [
-                "Developed REST endpoints using Flask microservices to serve data to front-end applications, improving data accessibility for academic scheduling tools.",
-                "Designed and implemented data models using SQLAlchemy ORM to interact with a MySQL database, ensuring efficient data retrieval and storage.",
-                "Built the GIA Scheduler, a backend application to automate and optimize the scheduling of graduate assistants, reducing manual workload by 30%."
-              ]
-            }
-          ],
-          "education": [
-            {
-              "university": "University of Cumberlands",
-              "degree": "Master of Business Administration",
-              "duration": "Jul 2023 - May 2025",
-              "location": "Williamsburg, KY, USA"
-            },
-            {
-              "university": "Texas State University",
-              "degree": "Master of Science in Computer Science",
-              "duration": "Jan 2018 - May 2020",
-              "location": "Austin, TX, USA"
-            },
-            {
-              "university": "Visvesvaraya Technological University",
-              "degree": "Bachelor of Engineering in Computer Science",
-              "duration": "Aug 2012 - Jul 2016",
-              "location": "Bengaluru, Karnataka, India"
-            }
-          ]
+            "experience": [
+                {
+                    "title": "Independent Software Consultant",
+                    "company": "Freelance",
+                    "duration": "Aug 2023 - May 2025",
+                    "location": "Remote",
+                    "bullets": [
+                        "Designed and implemented dynamic table creation in Oracle Database using Spring Data JPA for efficient data management.",
+                        "Developed and maintained a microservices architecture, managing 50+ APIs with Java Spring Boot to support front-end applications.",
+                        "Engineered a real-time email notification system to deliver updates to product consumers, improving engagement and communication.",
+                        "Deployed and managed applications in OpenShift environment, ensuring high availability and scalability.",
+                        "Built and optimized CI/CD pipelines using Jenkins for automated deployments and seamless integration.",
+                        "Developed high-throughput Kafka listeners to process, enrich, and persist high-volume data using JSON parsing libraries and MongoDB.",
+                        "Leveraged AI assistants, including Copilot, to fast-track proof-of-concept development and enhance efficiency."
+                    ]
+                },
+                {
+                    "title": "Software Engineer",
+                    "company": "Microsoft",
+                    "duration": "Jan 2022 - Jul 2023",
+                    "location": "Irving, TX, USA",
+                    "bullets": [
+                        "Architected and developed components for Microsoft APIM GraphQL and Synthetic GraphQL services using C#/.NET.",
+                        "Integrated Geneva Monagent into the newly upgraded APIM stack to enhance monitoring capabilities.",
+                        "Developed comprehensive telemetry and metrics for APIM services by leveraging Geneva and monagent to facilitate log flow from application to Kusto.",
+                        "Designed and developed Azure CLI commands for new APIM services by leveraging the Azure Python SDK.",
+                        "Resolved critical customer-facing issues and bugs related to Azure API Management (APIM), improving service reliability.",
+                    ]
+                },
+                {
+                    "title": "Software Engineer",
+                    "company": "Citi",
+                    "duration": "Aug 2020 - Dec 2021",
+                    "location": "Irving, TX, USA",
+                    "bullets": [
+                        "Designed and built scalable Microservices utilizing Java and Spring Boot.",
+                        "Created robust stream listeners to consume and process data from Kafka topics.",
+                        "Transformed incoming Kafka JSON data using parsing libraries like Gson for downstream consumption.",
+                        "Developed RESTful services using Java to retrieve data from MongoDB, providing necessary data to downstream applications.",
+                        "Enhanced backend application efficiency by 20% through strategic code refactoring and reduction of event interdependencies.",
+                    ]
+                },
+                {
+                    "title": "Graduate Instructional Assistant",
+                    "company": "Texas State University",
+                    "duration": "Jul 2018 - May 2020",
+                    "location": "Austin, TX, USA",
+                    "bullets": [
+                        "Developed REST endpoints using Flask microservices to serve data to front-end applications, improving data accessibility for academic scheduling tools.",
+                        "Designed and implemented data models using SQLAlchemy ORM to interact with a MySQL database, ensuring efficient data retrieval and storage.",
+                        "Built the GIA Scheduler, a backend application to automate and optimize the scheduling of graduate assistants, reducing manual workload by 30%."
+                    ]
+                }
+            ],
+            "education": [
+                {
+                    "university": "University of Cumberlands",
+                    "degree": "Master of Business Administration",
+                    "duration": "Jul 2023 - May 2025",
+                    "location": "Williamsburg, KY, USA"
+                },
+                {
+                    "university": "Texas State University",
+                    "degree": "Master of Science in Computer Science",
+                    "duration": "Jan 2018 - May 2020",
+                    "location": "Austin, TX, USA"
+                },
+                {
+                    "university": "Visvesvaraya Technological University",
+                    "degree": "Bachelor of Engineering in Computer Science",
+                    "duration": "Aug 2012 - Jul 2016",
+                    "location": "Bengaluru, Karnataka, India"
+                }
+            ]
         };
 
         // --- DYNAMIC CONTENT POPULATION ---
@@ -357,7 +672,7 @@
         const raycaster = new THREE.Raycaster();
         const mouse = new THREE.Vector2();
         let intersected;
-        
+
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(window.devicePixelRatio);
         camera.position.z = 8;
@@ -367,7 +682,7 @@
         controls.enableZoom = false;
         controls.enablePan = false;
         controls.rotateSpeed = 0.4;
-        
+
         // --- LIGHTING ---
         scene.add(new THREE.AmbientLight(0xffffff, 0.5));
         const dirLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -377,7 +692,7 @@
         // --- 3D GALAXY OBJECTS ---
         const skillGalaxy = new THREE.Group();
         scene.add(skillGalaxy);
-        
+
         const coreMaterial = new THREE.MeshStandardMaterial({ color: 0x4F46E5, roughness: 0.3, metalness: 0.8 });
         const coreGeom = new THREE.IcosahedronGeometry(1.2, 1);
         const core = new THREE.Mesh(coreGeom, coreMaterial);
@@ -402,7 +717,7 @@
             skillGalaxy.add(pivot);
 
             mesh.position.x = skill.distance;
-            
+
             skillObjects.push({ mesh, pivot, distance: skill.distance });
             gsap.to(pivot.rotation, { y: Math.random() * Math.PI * 2, duration: 15 + Math.random() * 10, repeat: -1, ease: "none" });
         });
@@ -430,10 +745,10 @@
                     document.body.style.cursor = 'pointer';
                 }
             } else {
-                 if (intersected) {
+                if (intersected) {
                     intersected.material.color.set(intersected.userData.originalColor);
                     document.getElementById(intersected.userData.sectionId)?.classList.remove('section-highlight');
-                 }
+                }
                 intersected = null;
                 document.body.style.cursor = 'default';
             }
@@ -443,7 +758,7 @@
             requestAnimationFrame(animate);
         }
         animate();
-        
+
         // --- EVENT LISTENERS ---
         function onWindowResize() {
             camera.aspect = window.innerWidth / window.innerHeight;
@@ -480,5 +795,5 @@
 
     </script>
 </body>
-</html>
 
+</html>
